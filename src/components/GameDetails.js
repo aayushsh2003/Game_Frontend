@@ -7,7 +7,7 @@ function GameDetails() {
   const [game, setGame] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/games`)
+    fetch(`https://game-backend-rlw3.onrender.com/api/games`)
       .then((response) => response.json())
       .then((data) => {
         const selectedGame = data.find((g) => g.id === parseInt(id));

@@ -6,7 +6,7 @@ function Home() {
   const [games, setGames] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/games')
+    fetch('https://game-backend-rlw3.onrender.com/api/games')
       .then((response) => response.json())
       .then((data) => setGames(data));
   }, []);
